@@ -1,0 +1,22 @@
+---
+title: "Coursera - Developing Data Projects - Course Project - Diamonds"
+author: "Anders Molven Larsen"
+date: "14 December 2017"
+output: ioslides_presentation
+---
+## Overview
+
+This was built as part of a deliverable for the course Developing Data Products as part of the Coursera Data Science Specialization.
+
+The app developed as part of this assignment can be found at: https://darksyde98.shinyapps.io/diamonds/
+
+The Github repository where the code and information is stored: 
+
+## Application Functionality
+
+## Diamonds data set
+
+## Data Plot
+
+
+
