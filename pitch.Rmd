@@ -6,17 +6,45 @@ output: ioslides_presentation
 ---
 ## Overview
 
+```{r, echo = FALSE}
+library(ggplot2)
+data(diamonds)
+```
+
 This was built as part of a deliverable for the course Developing Data Products as part of the Coursera Data Science Specialization.
 
 The app developed as part of this assignment can be found at: https://darksyde98.shinyapps.io/diamonds/
 
-The Github repository where the code and information is stored: 
+The Github repository where the code and information is stored: https://github.com/Darksyde98/diamondapp
 
 ## Application Functionality
 
+You are first asked to choose a number of diamonds to sample from 1 to the full number of 53,940 diamonds in the dataset.
+
+Secondly you are asked to choose x and y values for the plot followed by color to separate the plot points.
+
+The range of options are: ***carat***, ***cut***, ***color***, ***clarity***, ***depth***, ***table*** and ***price***.
+
+Next you can choose jitter to avoid overplotting and smooth to add a smooth line to each plot.
+
+Finally you can set facets rows and columns to plot multiple values across several plots.
+
 ## Diamonds data set
+
+The app offers a simple way to explore and visualize the diamonds dataset found in ggplot2. This dataset is a collection of over 50,000 diamonds recorded with several variables that can be explored in this app.
+
+```{r, echo = FALSE}
+summary(diamonds)
+```
 
 ## Data Plot
 
+```{r}
+g <- ggplot(data = diamonds, aes(x = carat, y = price)) +
+        geom_point(inherit.aes = TRUE, aes(col = cut)) +
+        facet_grid(. ~ color)
+       
+g
+```
 
 
