@@ -8,6 +8,11 @@ pageWithSidebar(
         headerPanel("Explore the diamonds set!"),
 
         sidebarPanel(
+                p("This app lets you explore the diamonds data set visually."),
+                p("Add the number of diamons to plot through the slider"),
+                p("Choose your input from the relevant variables."),
+                p("Add jitter and smooth lines to help visualize."),
+                p("Facets lets you add plots in a grid style according to input."),
 
                 sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(dataset),
                             value=min(1000, nrow(dataset)), step=500, round=0),
